@@ -1,0 +1,20 @@
+# Ambiente virtual do Python
+.venv/
+venv/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Dados reais/brutos não devem ir para o GitHub
+dados_brutos/
+relatorio_atendimento_analitico_*.csv
+
+# Arquivos temporários
+*.log
+*.tmp
+*.zip
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
