@@ -6,11 +6,17 @@ venv/
 __pycache__/
 *.pyc
 
-# Dados reais/brutos não devem ir para o GitHub
+# Dados reais/brutos nao devem ir para o GitHub
 dados_brutos/
 relatorio_atendimento_analitico_*.csv
 
-# Arquivos temporários
+# Arquivos tratados podem conter dados reais derivados
+dados_tratados/
+
+# Arquivos do Power BI podem carregar dados embutidos
+*.pbix
+
+# Arquivos temporarios
 *.log
 *.tmp
 *.zip
