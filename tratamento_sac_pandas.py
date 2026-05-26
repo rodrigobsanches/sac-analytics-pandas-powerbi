@@ -91,7 +91,7 @@ atendimentos.loc[atendimentos["Agente"].isnull(), "Agente"] = "Não informado"
 atendimentos.loc[atendimentos["Recorrência"].isnull(), "Recorrência"] = "Sem recorrência"
 atendimentos.loc[atendimentos["Observação"].isnull(), "Observação"] = "Sem observação"
 
-# Alguns campos de data vieram com "-". Troquei por vazio para o Pandas conseguir tratar como data.
+# Alguns campos de data vieram com "-". Foi alterado para vazio para o Pandas conseguir tratar como data.
 atendimentos.loc[atendimentos["Data de finalização"] == "-", "Data de finalização"] = ""
 atendimentos.loc[atendimentos["Data de fila"] == "-", "Data de fila"] = ""
 
@@ -374,7 +374,6 @@ if "Canal" not in atendimentos.columns:
 # GERANDO PROJECAO ESTATISTICA
 # ==============================
 
-# A projecao fica em um arquivo separado para nao interferir nos graficos
 # categoricos da base real, como status, faixa de fila e recorrencia.
 atendimentos["Tipo Registro"] = "Real"
 projecao_atendimentos = pd.DataFrame()
