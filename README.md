@@ -237,11 +237,34 @@ Se estiver usando o ambiente virtual local do projeto no Windows, use:
 .\.venv\Scripts\python.exe tratamento_sac_pandas.py
 ```
 
+Para gerar a versão pública com dados fictícios, mesmo que existam arquivos em `dados_brutos/`, use:
+
+```powershell
+.\.venv\Scripts\python.exe tratamento_sac_pandas.py --ficticio
+```
+
 5. Após a execução, os arquivos tratados serão gerados em:
 
 ```text
 dados_tratados/
 ```
+
+## Versão pública do dashboard
+
+O repositório inclui uma versão pública do arquivo tratado e do Power BI usando apenas dados fictícios:
+
+```text
+dados_tratados/sac_analytics_powerbi.xlsx
+powerbi/sac_analytics_powerbi.pbix
+```
+
+Antes de publicar esses arquivos, gere a base com:
+
+```powershell
+.\.venv\Scripts\python.exe tratamento_sac_pandas.py --ficticio
+```
+
+Essa etapa garante que o Excel usado pelo Power BI seja montado somente com a base `dados_ficticios/base_sac_ficticia.csv`.
 
 
 ## Autor

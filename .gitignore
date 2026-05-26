@@ -12,9 +12,13 @@ relatorio_atendimento_analitico_*.csv
 
 # Arquivos tratados podem conter dados reais derivados
 dados_tratados/
+!dados_tratados/
+!dados_tratados/sac_analytics_powerbi.xlsx
 
 # Arquivos do Power BI podem carregar dados embutidos
 *.pbix
+!powerbi/
+!powerbi/sac_analytics_powerbi.pbix
 
 # Arquivos temporarios
 *.log

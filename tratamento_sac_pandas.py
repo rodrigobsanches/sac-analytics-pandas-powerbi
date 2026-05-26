@@ -2,6 +2,7 @@
 # Objetivo: tratar uma base de atendimentos usando Pandas
 # Autor: Rodrigo Sanches
 
+import argparse
 from pathlib import Path
 
 import pandas as pd
@@ -14,9 +15,19 @@ import pandas as pd
 pasta_dados_brutos = Path("dados_brutos")
 pasta_dados_ficticios = Path("dados_ficticios")
 
+parser = argparse.ArgumentParser(
+    description="Trata a base de SAC e gera o Excel consolidado para Power BI."
+)
+parser.add_argument(
+    "--ficticio",
+    action="store_true",
+    help="Forca o uso da base ficticia, mesmo que existam arquivos em dados_brutos/."
+)
+args = parser.parse_args()
+
 arquivos_brutos = sorted(pasta_dados_brutos.glob("relatorio_atendimento_analitico*.csv"))
 
-if arquivos_brutos:
+if arquivos_brutos and not args.ficticio:
     origem_dados = "brutos"
     arquivos_entrada = arquivos_brutos
 else:
