@@ -6,7 +6,7 @@ venv/
 __pycache__/
 *.pyc
 
-# Dados reais/brutos nao devem ir para o GitHub
+# Dados reais/brutos 
 dados_brutos/
 relatorio_atendimento_analitico_*.csv
 
@@ -15,7 +15,7 @@ dados_tratados/
 !dados_tratados/
 !dados_tratados/sac_analytics_powerbi.xlsx
 
-# Arquivos do Power BI podem carregar dados embutidos
+# Arquivos do Power BI
 *.pbix
 !powerbi/
 !powerbi/sac_analytics_powerbi.pbix
