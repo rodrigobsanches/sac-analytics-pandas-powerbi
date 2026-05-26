@@ -8,6 +8,8 @@ __pycache__/
 
 # Dados reais/brutos 
 dados_brutos/
+!dados_brutos/
+!dados_brutos/.gitkeep
 relatorio_atendimento_analitico_*.csv
 
 # Arquivos tratados podem conter dados reais derivados
